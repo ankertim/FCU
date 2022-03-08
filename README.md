@@ -1,3 +1,3 @@
 # FCU
 
-Homework of FCU
+Homework and Project of FCU
