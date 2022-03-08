@@ -1,0 +1,85 @@
+<html>
+<body>
+<pre>
+<h1>猩ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: a a, a, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.24.1
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DARMCM1.DLL V1.18.0.0
+Target DLL:      Nu_Link.dll V2.02
+Dialog DLL:      TARMCM1.DLL V1.13.0.0
+ 
+<h2>Project:</h2>
+C:\Users\123\Downloads\微處理機系統\D0687151何宜諺_微處理機期末專題\Lab14\Nu-LB-NUC140_BSP3.00.004_v1.2\SampleCode\Nu-LB-NUC140\UART0_RX\KEIL\Nu-LB-NUC140_UART0_RX.uvproj
+Project File Date:  05/16/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'UART'
+creating preprocessor file for system_NUC100Series.c...
+creating preprocessor file for sys.c...
+creating preprocessor file for clk.c...
+creating preprocessor file for uart.c...
+creating preprocessor file for gpio.c...
+creating preprocessor file for spi.c...
+creating preprocessor file for retarget.c...
+creating preprocessor file for timer.c...
+creating preprocessor file for main.c...
+creating preprocessor file for SYS_init.c...
+creating preprocessor file for LCD.c...
+creating preprocessor file for Scankey.c...
+creating preprocessor file for Seven_Segment.c...
+compiling main.c...
+..\main.c(791): warning:  #177-D: variable "led6"  was declared but never referenced
+    int led4,led5,led6,led7;
+..\main.c(791): warning:  #177-D: variable "led7"  was declared but never referenced
+    int led4,led5,led6,led7;
+..\main.c(1097): warning:  #111-D: statement is unreachable
+  	free(root);
+..\main.c(846): warning:  #177-D: variable "show_cmd_index"  was declared but never referenced
+  	int show_cmd_index;
+..\main.c(1101): warning:  #177-D: variable "i"  was declared but never referenced
+  		uint8_t i = 0;
+..\main.c(1102): warning:  #177-D: variable "j"  was declared but never referenced
+  		uint8_t j = 5;
+..\main.c(1236): warning:  #177-D: variable "x"  was declared but never referenced
+  	int8_t x = 0, y = 0;
+..\main.c(1236): warning:  #177-D: variable "y"  was declared but never referenced
+  	int8_t x = 0, y = 0;
+..\main.c(1237): warning:  #177-D: variable "ow"  was declared but never referenced
+  	int8_t ow = 4, xw = 2;
+..\main.c(1237): warning:  #177-D: variable "xw"  was declared but never referenced
+  	int8_t ow = 4, xw = 2;
+..\main.c(1448): warning:  #177-D: variable "x"  was declared but never referenced
+  	int8_t x = 0, y = 0;
+..\main.c(1448): warning:  #177-D: variable "y"  was declared but never referenced
+  	int8_t x = 0, y = 0;
+..\main.c(1449): warning:  #177-D: variable "ow"  was declared but never referenced
+  	int8_t ow = 4, xw = 2;
+..\main.c(1449): warning:  #177-D: variable "xw"  was declared but never referenced
+  	int8_t ow = 4, xw = 2;
+..\main.c(1822): warning:  #186-D: pointless comparison of unsigned integer with zero
+  		for(;num>=0;num--){
+..\main.c(1794): warning:  #177-D: variable "j"  was declared but never referenced
+  		uint16_t i,j=3;
+..\main.c: 16 warnings, 0 errors
+linking...
+Program Size: Code=9440 RO-data=328 RW-data=2568 ZI-data=2120  
+After Build - User command #1: fromelf --bin ".\obj\UART0_RX.axf" --output ".\obj\UART0_RX.bin"
+After Build - User command #2: fromelf --text -c ".\obj\UART0_RX.axf" --output ".\obj\UART0_RX.txt"
+".\obj\UART0_RX.axf" - 0 Error(s), 16 Warning(s).
+Build Time Elapsed:  00:00:05
+</pre>
+</body>
+</html>
