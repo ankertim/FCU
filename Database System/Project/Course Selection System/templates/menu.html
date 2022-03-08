@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>課程搜尋</title>
+	<!-- Bootstrap core CSS -->
+	<link href="{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="{{ url_for('static',filename='css/blog-home.css') }}" rel="stylesheet">
+	<style>
+		body{
+				  margin:0px;
+				  padding:0px;
+				  background:#fff url()center center fixed no-repeat;
+				  background-size: cover;
+		  }
+		  div{
+				  font-weight:900;
+		  }
+	</style>
+  </head>
+  <body>
+    <h2 style="text-align:center">{{nid}}的總表搜尋</h2>
+
+	<script>
+	dept=new Array();
+	dept[0]=["總表"]
+	dept[1]=["企管一甲", "企管一乙", "企管二甲", "企管二乙", "企管三甲", "企管三乙", "企管四甲", "企管四乙","企管碩一"];
+	dept[2]=["通識－社會整合(SB)", "通識－人文(H)", "通識－自然(N)", "通識－社會(S)", "通識－統合(M)", "通識－人文(夜)(H)", "通識－自然(夜)(N)", "通識－社會(夜)(S)", "通識－統合(夜)(M)"];
+	dept[3]=["資訊一甲", "資訊一乙", "資訊一丙", "資訊二甲", "資訊二乙", "資訊二丙", "資訊二丁", "資訊三甲", "資訊三乙", "資訊三丙", "資訊三丁", "資訊碩一", "資訊碩二", "電腦系統學程資訊三", "軟體工程學程資訊三", "網路與資安學程資訊三", "資訊跨域學程資訊三"];
+	
+	function renew(index){
+		for(var i=0;i<dept[index].length;i++)
+			document.myForm.c2.options[i] = new Option(dept[index][i]);	// 設定新選項
+		document.myForm.c2.length = dept[index].length;	// 刪除多餘的選項
+	}
+	</script>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#ebebe3;">
+		<div class="container">
+			<img src="{{ url_for('static',filename='fcu_logo.jpg') }}" alt="fcu_logo" style="width: 200px; height:60px; display:block; margin:auto;">
+		  <div style="margin-left:50px; font-size:20px">{{nid}}的總表搜尋</div>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="">
+				  <span class="sr-only">(current)</span>
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/start">
+					<div style="color:#5B5B5B">主頁</div>
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/menu"><div style="color:#0080FF">課表檢索</div></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/my_course" id="login">
+					<div style="color:#5B5B5B">預選課表</div>
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/cares" id="login">
+					<div style="color:#5B5B5B">關注清單</div>
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/" id="login">
+					<div style="color:#5B5B5B">登出</div>
+				</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	 </nav>
+	 <!-- Form -->
+	<form name="myForm" method="post" action="/fcu_course" style="text-align:center; margin:60px">
+		學系：
+		<select name="d1" style="width:150px; height:30px" onclick="renew(this.selectedIndex)">
+			<option>總表</option>
+			<option>企業管理學系</option>
+			<option>通識核心課程</option>
+			<option>資訊工程學系</option>
+		</select>
+		班級：
+		<select name="c2" style="width:150px; height:30px">
+			<option value="">請先從左方選取學系</option>
+		</select>
+		<input type="submit" value="送出">
+	</form>
+  </body>
+</html>
