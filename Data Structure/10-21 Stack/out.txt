@@ -1,0 +1,2 @@
+Wt b step
+We want to determine tht two-dimional array.
