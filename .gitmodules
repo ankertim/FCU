@@ -1,0 +1,3 @@
+[submodule "Database Systems/Project/Course-Selection-System"]
+	path = Database Systems/Project/Course-Selection-System
+	url = git@github.com:ankertim/Course-Selection-System.git
